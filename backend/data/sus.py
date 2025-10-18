@@ -376,13 +376,6 @@ def generate_mercedes_cota_dataset(num_rows=10000, output_file='mercedes_cota_20
     print(f"Seasons:             {sorted(df['season'].unique())}")
     print(f"Drivers:             {sorted(df['driver'].unique())}")
     print(f"Avg Lap Time:        {df['lap_time'].mean():.3f}s")
-    print(f"Avg Tire Wear:       {df['tyre_wear_pct'].mean():.2f}%")
-    print(f"Pit Stops:           {df['pit_stop_flag'].sum()}")
-    print(f"Safety Cars:         {(df['flag_status'] == 'Safety Car').sum()}")
-    print(f"Tire Cliffs:         {df['tyre_cliff_reached'].sum()}")
-    
-    print("\n🎯 Strategy Distribution:")
-    print(df['race_strategy'].value_counts())
     
     print("\n🛞 Compound Usage:")
     print(df['tyre_compound'].value_counts())
