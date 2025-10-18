@@ -1,0 +1,7 @@
+# backend/requirements.txt
+fastapi
+uvicorn[standard]  # ASGI server used to run FastAPI
+pandas
+requests
+scikit-learn
+joblib

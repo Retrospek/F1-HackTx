@@ -1,0 +1,19 @@
+#--- General Files ---
+.DS_Store
+.env
+.env.local
+
+#--- Python/Backend Files ---
+/backend/venv
+*.pyc
+__pycache__/
+# Downloaded Data and ML Artifacts
+/backend/data/temp_raw_data/
+/backend/data/ml/*.joblib
+/backend/data/ml/*.pickle
+
+#--- Node/Frontend Files ---
+/node_modules
+/frontend/.next
+/frontend/node_modules
+/frontend/out

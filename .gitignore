@@ -1,0 +1,19 @@
+#--- General Project Files ---
+.DS_Store
+.env
+.env.local
+
+#--- Python/Backend Files ---
+venv/
+*.pyc
+__pycache__/
+# Python ML artifacts (DO NOT upload these large files)
+backend/ml/*.joblib
+backend/ml/*.pickle
+
+#--- Node/Frontend Files ---
+/node_modules
+.next/
+/frontend/.next
+/frontend/node_modules
+/frontend/out
