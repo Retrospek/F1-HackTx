@@ -6,7 +6,7 @@ interface FlagComponentProps {
   flagType?: FlagType;
 }
 
-const FlagComponent: React.FC<FlagComponentProps> = ({ flagType = 'none' }) => {
+const FlagComponent: React.FC<FlagComponentProps> = ({ flagType = 'red' }) => {
   const [isWarningFlashEnabled, setIsWarningFlashEnabled] = useState(true);
 
   // Determine background color and text based on flag type
@@ -36,16 +36,16 @@ const FlagComponent: React.FC<FlagComponentProps> = ({ flagType = 'none' }) => {
   const { bgColor, text, blinkClass } = getFlagStyles();
 
   return (
-    <div className="flex flex-col items-center space-y-2">
+    <div className="flex flex-col items-center space-y-2 ml-2 mt-8 w-full">
       <div className={`
         text-white 
-        text-xl 
+        text-4xl 
         font-bold 
-        py-3 
-        px-6 
+        py-16 
+        px-12 
         rounded-lg 
         text-center 
-        w-[200px]
+        w-full
         ${bgColor} 
         ${blinkClass}
       `}>
@@ -53,7 +53,7 @@ const FlagComponent: React.FC<FlagComponentProps> = ({ flagType = 'none' }) => {
       </div>
       
       <div className="flex items-center space-x-2">
-        <span className="text-[#D4D4D4] text-sm">Warning Flash</span>
+        <span className="text-[#D4D4D4] text-lg">Warning Flash</span>
         <label className="inline-flex items-center cursor-pointer">
           <input
             type="checkbox"
