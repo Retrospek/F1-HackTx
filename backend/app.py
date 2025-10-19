@@ -3,11 +3,10 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List, Dict, Optional
+from joblib import load
+import numpy as np
 import uvicorn
-import sys
-import os
 import pandas as pd
-import joblib 
 from typing import Dict
 from pydantic import BaseModel
 
@@ -92,6 +91,27 @@ def get_cumulative_laps():
     
     return df_history[['lap_number', 'lap_duration']].to_dict('list')
 
+weather_model = load(r'backend\ml\logistic_model.joblib')
+
+class WeatherPredictRequest(BaseModel):
+    laps: list[dict]
+
+@app.post("/api/weather/predict")
+async def get_weather_prediction(request: WeatherPredictRequest):
+    laps = request.laps
+    
+    if len(laps) != 10:   
+        raise HTTPException(status_code=400, detail=f"Expected {10} laps in the window")
+    
+    X_input = np.array([[lap['rainfall_mm'], lap['air_temperature_C']] for lap in laps]).flatten().reshape(1, -1)
+    
+    prediction = weather_model.predict(X_input)[0]
+    probability = weather_model.predict_proba(X_input)[0][1]
+    
+    return {
+        "rain_prediction": int(prediction),
+        "probability": float(probability)
+    }
 
 # --- Run Server Command (to be executed in the terminal) ---
 if __name__ == '__main__':

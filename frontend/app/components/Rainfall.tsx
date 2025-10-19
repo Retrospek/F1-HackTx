@@ -6,9 +6,13 @@ interface RainfallProps {
 
 const Rainfall: React.FC<RainfallProps> = ({ percentage }) => {
   return (
-    <div className="bg-blue-300 rounded-lg text-center py-20 -mt-15">
-      <div className="text-[#515151] text-3xl mb-4">Rainfall</div>
-      <div className="text-[#515151] text-8xl font-bold">{percentage}%</div>
+    <div className="bg-[#1A2B4A] rounded-lg p-6 text-center h-full flex flex-col justify-center">
+      <div className="text-[#D4D4D4] text-sm mb-3 uppercase tracking-wider">
+        Rainfall
+      </div>
+      <div className="text-white text-6xl font-bold">
+        {percentage}%
+      </div>
     </div>
   );
 };
