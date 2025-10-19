@@ -1,0 +1,2970 @@
+[
+  {
+    "timestamp": "2024-10-20T14:00:01.887000",
+    "lap_number": 1,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "AGGRESSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.62,
+        "DEFENSIVE": 0.01,
+        "NEUTRAL": 0.37
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 36.3,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 96.653,
+      "lap_number": 1,
+      "delta_to_previous": 0.0,
+      "delta_status": "baseline",
+      "signal": "MAINTAIN"
+    },
+    "engine": {
+      "engine_power_pct": 97.18,
+      "throttle_pct": 97.44
+    },
+    "position": {
+      "current_position": 3,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 1.22,
+      "stint_lap_count": 1,
+      "tyre_temp_C": 69.0,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 246.5,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 107.87,
+      "interval_gap": 4.784
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:01:34.006000",
+    "lap_number": 2,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "AGGRESSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.89,
+        "DEFENSIVE": 0.01,
+        "NEUTRAL": 0.1
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 37.4,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 95.029,
+      "lap_number": 2,
+      "delta_to_previous": -1.6240000000000094,
+      "delta_status": "improving",
+      "signal": "PUSH - Delta improving!"
+    },
+    "engine": {
+      "engine_power_pct": 95.87,
+      "throttle_pct": 95.85
+    },
+    "position": {
+      "current_position": 3,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 2.93,
+      "stint_lap_count": 2,
+      "tyre_temp_C": 83.0,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 228.3,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 106.17,
+      "interval_gap": 5.913
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:03:08.565000",
+    "lap_number": 3,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "AGGRESSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.9696061734965408,
+        "DEFENSIVE": 0.0,
+        "NEUTRAL": 0.030393826503459283
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 33.5,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 94.239,
+      "lap_number": 3,
+      "delta_to_previous": -0.789999999999992,
+      "delta_status": "improving",
+      "signal": "PUSH - Delta improving!"
+    },
+    "engine": {
+      "engine_power_pct": 92.38,
+      "throttle_pct": 91.0
+    },
+    "position": {
+      "current_position": 3,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 4.93,
+      "stint_lap_count": 3,
+      "tyre_temp_C": 93.0,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 241.2,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 104.44,
+      "interval_gap": 6.352
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:04:39.072000",
+    "lap_number": 4,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "AGGRESSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.6843813499366678,
+        "DEFENSIVE": 0.0,
+        "NEUTRAL": 0.31561865006333223
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 35.1,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 92.39,
+      "lap_number": 4,
+      "delta_to_previous": -1.8490000000000038,
+      "delta_status": "improving",
+      "signal": "PUSH - Delta improving!"
+    },
+    "engine": {
+      "engine_power_pct": 98.95,
+      "throttle_pct": 97.33
+    },
+    "position": {
+      "current_position": 3,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 8.33,
+      "stint_lap_count": 4,
+      "tyre_temp_C": 97.0,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 223.1,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 102.67,
+      "interval_gap": 4.417
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:06:12.510000",
+    "lap_number": 5,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "AGGRESSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.8443813499366678,
+        "DEFENSIVE": 0.02,
+        "NEUTRAL": 0.13561865006333224
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 33.8,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 91.663,
+      "lap_number": 5,
+      "delta_to_previous": -0.7270000000000039,
+      "delta_status": "improving",
+      "signal": "PUSH - Delta improving!"
+    },
+    "engine": {
+      "engine_power_pct": 98.36,
+      "throttle_pct": 95.26
+    },
+    "position": {
+      "current_position": 3,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 12.44,
+      "stint_lap_count": 5,
+      "tyre_temp_C": 90.7,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 233.5,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 100.85,
+      "interval_gap": 4.567
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:07:46.497000",
+    "lap_number": 6,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "AGGRESSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.8228315946348733,
+        "DEFENSIVE": 0.0,
+        "NEUTRAL": 0.1771684053651267
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 35.4,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 94.723,
+      "lap_number": 6,
+      "delta_to_previous": 3.0600000000000023,
+      "delta_status": "degrading",
+      "signal": "WARNING - Degradation detected"
+    },
+    "engine": {
+      "engine_power_pct": 90.62,
+      "throttle_pct": 91.74
+    },
+    "position": {
+      "current_position": 3,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 16.55,
+      "stint_lap_count": 6,
+      "tyre_temp_C": 94.7,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 225.2,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 99.0,
+      "interval_gap": 5.926
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:09:19.980000",
+    "lap_number": 7,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "AGGRESSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.7784528964100214,
+        "DEFENSIVE": 0.0,
+        "NEUTRAL": 0.22154710358997876
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 35.9,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 94.892,
+      "lap_number": 7,
+      "delta_to_previous": 0.16899999999999693,
+      "delta_status": "degrading",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 91.61,
+      "throttle_pct": 88.92
+    },
+    "position": {
+      "current_position": 3,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 21.49,
+      "stint_lap_count": 7,
+      "tyre_temp_C": 89.8,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 222.9,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 97.19,
+      "interval_gap": 4.707
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:10:51.558000",
+    "lap_number": 8,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "AGGRESSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.8120857835993139,
+        "DEFENSIVE": 0.0,
+        "NEUTRAL": 0.1879142164006862
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 37.1,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 95.532,
+      "lap_number": 8,
+      "delta_to_previous": 0.6400000000000006,
+      "delta_status": "degrading",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 89.11,
+      "throttle_pct": 92.38
+    },
+    "position": {
+      "current_position": 3,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 27.46,
+      "stint_lap_count": 8,
+      "tyre_temp_C": 93.7,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 227.5,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 95.4,
+      "interval_gap": 4.399
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:12:22.814000",
+    "lap_number": 9,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "AGGRESSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.5439693191857714,
+        "DEFENSIVE": 0.01,
+        "NEUTRAL": 0.4460306808142285
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 33.1,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 94.774,
+      "lap_number": 9,
+      "delta_to_previous": -0.7579999999999956,
+      "delta_status": "improving",
+      "signal": "PUSH - Delta improving!"
+    },
+    "engine": {
+      "engine_power_pct": 88.82,
+      "throttle_pct": 86.99
+    },
+    "position": {
+      "current_position": 3,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 33.4,
+      "stint_lap_count": 9,
+      "tyre_temp_C": 92.4,
+      "expected_life_remaining": "Medium (10-20 laps)",
+      "tire_health_status": "FAIR"
+    },
+    "telemetry": {
+      "speed_kph": 218.4,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 93.66,
+      "interval_gap": 4.281
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:13:55.354000",
+    "lap_number": 10,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "NEUTRAL",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.21090730946194003,
+        "DEFENSIVE": 0.01,
+        "NEUTRAL": 0.77909269053806
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 33.4,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 94.372,
+      "lap_number": 10,
+      "delta_to_previous": -0.402000000000001,
+      "delta_status": "improving",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 87.78,
+      "throttle_pct": 90.65
+    },
+    "position": {
+      "current_position": 3,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 40.19,
+      "stint_lap_count": 10,
+      "tyre_temp_C": 93.0,
+      "expected_life_remaining": "Medium (10-20 laps)",
+      "tire_health_status": "FAIR"
+    },
+    "telemetry": {
+      "speed_kph": 208.3,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 91.8,
+      "interval_gap": 4.654
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:15:29.180000",
+    "lap_number": 11,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "NEUTRAL",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.05072252560205895,
+        "DEFENSIVE": 0.05,
+        "NEUTRAL": 0.8992774743979411
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 33.3,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 95.386,
+      "lap_number": 11,
+      "delta_to_previous": 1.0139999999999958,
+      "delta_status": "degrading",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 83.42,
+      "throttle_pct": 85.81
+    },
+    "position": {
+      "current_position": 3,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 47.71,
+      "stint_lap_count": 11,
+      "tyre_temp_C": 96.5,
+      "expected_life_remaining": "Medium (10-20 laps)",
+      "tire_health_status": "FAIR"
+    },
+    "telemetry": {
+      "speed_kph": 195.9,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 89.99,
+      "interval_gap": 7.278
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:17:03.604000",
+    "lap_number": 12,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "NEUTRAL",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.053667563005101934,
+        "DEFENSIVE": 0.1,
+        "NEUTRAL": 0.8463324369948979
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 35.2,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 95.43,
+      "lap_number": 12,
+      "delta_to_previous": 0.04400000000001114,
+      "delta_status": "degrading",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 81.51,
+      "throttle_pct": 81.8
+    },
+    "position": {
+      "current_position": 3,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 56.62,
+      "stint_lap_count": 12,
+      "tyre_temp_C": 94.0,
+      "expected_life_remaining": "Medium (10-20 laps)",
+      "tire_health_status": "FAIR"
+    },
+    "telemetry": {
+      "speed_kph": 188.0,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 88.21,
+      "interval_gap": 8.637
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:18:35.343000",
+    "lap_number": 13,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "NEUTRAL",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.03504718957147434,
+        "DEFENSIVE": 0.46,
+        "NEUTRAL": 0.5049528104285257
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 33.0,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 95.753,
+      "lap_number": 13,
+      "delta_to_previous": 0.3229999999999933,
+      "delta_status": "degrading",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 80.9,
+      "throttle_pct": 83.56
+    },
+    "position": {
+      "current_position": 3,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 65.6,
+      "stint_lap_count": 13,
+      "tyre_temp_C": 88.8,
+      "expected_life_remaining": "Low (5-10 laps)",
+      "tire_health_status": "DEGRADING"
+    },
+    "telemetry": {
+      "speed_kph": 187.0,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 86.53,
+      "interval_gap": 8.307
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:20:09.552000",
+    "lap_number": 14,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "DEFENSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.011137724550898202,
+        "DEFENSIVE": 0.64,
+        "NEUTRAL": 0.34886227544910176
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 36.7,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 97.675,
+      "lap_number": 14,
+      "delta_to_previous": 1.921999999999997,
+      "delta_status": "degrading",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 77.26,
+      "throttle_pct": 80.26
+    },
+    "position": {
+      "current_position": 3,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 76.85,
+      "stint_lap_count": 14,
+      "tyre_temp_C": 88.8,
+      "expected_life_remaining": "Low (5-10 laps)",
+      "tire_health_status": "DEGRADING"
+    },
+    "telemetry": {
+      "speed_kph": 181.7,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 84.82,
+      "interval_gap": 11.37
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:21:41.088000",
+    "lap_number": 15,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "DEFENSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.06,
+        "DEFENSIVE": 0.93,
+        "NEUTRAL": 0.01
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 34.8,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 122.805,
+      "lap_number": 15,
+      "delta_to_previous": 25.13000000000001,
+      "delta_status": "degrading",
+      "signal": "WARNING - Degradation detected"
+    },
+    "engine": {
+      "engine_power_pct": 97.45,
+      "throttle_pct": 99.45
+    },
+    "position": {
+      "current_position": 5,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 0.0,
+      "stint_lap_count": 0,
+      "tyre_temp_C": 55.0,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 250.2,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 82.98,
+      "interval_gap": 10.668
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:23:15.445000",
+    "lap_number": 16,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "AGGRESSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.97,
+        "DEFENSIVE": 0.0,
+        "NEUTRAL": 0.03
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 33.9,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 96.062,
+      "lap_number": 16,
+      "delta_to_previous": -26.74300000000001,
+      "delta_status": "improving",
+      "signal": "PUSH - Delta improving!"
+    },
+    "engine": {
+      "engine_power_pct": 93.7,
+      "throttle_pct": 90.89
+    },
+    "position": {
+      "current_position": 5,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 0.89,
+      "stint_lap_count": 1,
+      "tyre_temp_C": 69.0,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 232.2,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 81.27,
+      "interval_gap": 10.215
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:24:44.946000",
+    "lap_number": 17,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "DEFENSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.12,
+        "DEFENSIVE": 0.88,
+        "NEUTRAL": 0.0
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 37.7,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 123.555,
+      "lap_number": 17,
+      "delta_to_previous": 27.49300000000001,
+      "delta_status": "degrading",
+      "signal": "WARNING - Degradation detected"
+    },
+    "engine": {
+      "engine_power_pct": 94.95,
+      "throttle_pct": 98.74
+    },
+    "position": {
+      "current_position": 7,
+      "tyre_compound": "Hard"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 0.0,
+      "stint_lap_count": 0,
+      "tyre_temp_C": 55.0,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 231.7,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 79.55,
+      "interval_gap": 15.84
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:26:20.106000",
+    "lap_number": 18,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "AGGRESSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.94,
+        "DEFENSIVE": 0.01,
+        "NEUTRAL": 0.05
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 35.7,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 97.962,
+      "lap_number": 18,
+      "delta_to_previous": -25.593000000000004,
+      "delta_status": "improving",
+      "signal": "PUSH - Delta improving!"
+    },
+    "engine": {
+      "engine_power_pct": 96.3,
+      "throttle_pct": 97.8
+    },
+    "position": {
+      "current_position": 6,
+      "tyre_compound": "Hard"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 0.92,
+      "stint_lap_count": 1,
+      "tyre_temp_C": 69.0,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 232.1,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 77.67,
+      "interval_gap": 12.934
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:27:52.027000",
+    "lap_number": 19,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "AGGRESSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.98,
+        "DEFENSIVE": 0.01,
+        "NEUTRAL": 0.01
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 37.6,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 94.804,
+      "lap_number": 19,
+      "delta_to_previous": -3.1580000000000013,
+      "delta_status": "improving",
+      "signal": "PUSH - Delta improving!"
+    },
+    "engine": {
+      "engine_power_pct": 96.41,
+      "throttle_pct": 97.07
+    },
+    "position": {
+      "current_position": 5,
+      "tyre_compound": "Hard"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 2.25,
+      "stint_lap_count": 2,
+      "tyre_temp_C": 83.0,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 233.1,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 75.91,
+      "interval_gap": 12.467
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:29:25.810000",
+    "lap_number": 20,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "AGGRESSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.8208991229516864,
+        "DEFENSIVE": 0.02,
+        "NEUTRAL": 0.15910087704831347
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 38.7,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 94.18,
+      "lap_number": 20,
+      "delta_to_previous": -0.6239999999999952,
+      "delta_status": "improving",
+      "signal": "PUSH - Delta improving!"
+    },
+    "engine": {
+      "engine_power_pct": 96.29,
+      "throttle_pct": 100.0
+    },
+    "position": {
+      "current_position": 4,
+      "tyre_compound": "Hard"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 4.09,
+      "stint_lap_count": 3,
+      "tyre_temp_C": 92.0,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 239.4,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 74.06,
+      "interval_gap": 7.073
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:30:58.340000",
+    "lap_number": 21,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "DEFENSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.25,
+        "DEFENSIVE": 0.56,
+        "NEUTRAL": 0.19
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 38.4,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Yellow",
+      "incident_message": "Yellow flag - Turn 13",
+      "has_incident": true
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 105.319,
+      "lap_number": 21,
+      "delta_to_previous": 11.138999999999996,
+      "delta_status": "degrading",
+      "signal": "WARNING - Degradation detected"
+    },
+    "engine": {
+      "engine_power_pct": 68.63,
+      "throttle_pct": 68.98
+    },
+    "position": {
+      "current_position": 4,
+      "tyre_compound": "Hard"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 6.41,
+      "stint_lap_count": 4,
+      "tyre_temp_C": 83.1,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 158.4,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 72.2,
+      "interval_gap": 9.536
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:32:28.856000",
+    "lap_number": 22,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "DEFENSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.19,
+        "DEFENSIVE": 0.59,
+        "NEUTRAL": 0.22
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 36.9,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Yellow",
+      "incident_message": "Yellow flag - Turn 3",
+      "has_incident": true
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 106.161,
+      "lap_number": 22,
+      "delta_to_previous": 0.8419999999999987,
+      "delta_status": "degrading",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 67.47,
+      "throttle_pct": 66.28
+    },
+    "position": {
+      "current_position": 4,
+      "tyre_compound": "Hard"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 9.12,
+      "stint_lap_count": 5,
+      "tyre_temp_C": 88.0,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 156.6,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 70.46,
+      "interval_gap": 9.544
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:34:01.715000",
+    "lap_number": 23,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "DEFENSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.14,
+        "DEFENSIVE": 0.65,
+        "NEUTRAL": 0.21
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 35.7,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Yellow",
+      "incident_message": "Yellow flag - Turn 12",
+      "has_incident": true
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 105.75,
+      "lap_number": 23,
+      "delta_to_previous": -0.41100000000000136,
+      "delta_status": "improving",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 67.59,
+      "throttle_pct": 70.72
+    },
+    "position": {
+      "current_position": 4,
+      "tyre_compound": "Hard"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 12.22,
+      "stint_lap_count": 6,
+      "tyre_temp_C": 89.4,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 149.0,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 68.56,
+      "interval_gap": 9.992
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:35:37.049000",
+    "lap_number": 24,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "DEFENSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.16,
+        "DEFENSIVE": 0.61,
+        "NEUTRAL": 0.23
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 37.2,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Yellow",
+      "incident_message": "Yellow flag - Turn 18",
+      "has_incident": true
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 105.799,
+      "lap_number": 24,
+      "delta_to_previous": 0.049000000000006594,
+      "delta_status": "degrading",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 67.87,
+      "throttle_pct": 61.4
+    },
+    "position": {
+      "current_position": 4,
+      "tyre_compound": "Hard"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 16.12,
+      "stint_lap_count": 7,
+      "tyre_temp_C": 82.5,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 140.5,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 66.87,
+      "interval_gap": 9.713
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:37:09.397000",
+    "lap_number": 25,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "DEFENSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.15,
+        "DEFENSIVE": 0.63,
+        "NEUTRAL": 0.22
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 35.5,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Yellow",
+      "incident_message": "Yellow flag - Turn 11",
+      "has_incident": true
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 104.336,
+      "lap_number": 25,
+      "delta_to_previous": -1.463000000000008,
+      "delta_status": "improving",
+      "signal": "PUSH - Delta improving!"
+    },
+    "engine": {
+      "engine_power_pct": 66.57,
+      "throttle_pct": 58.88
+    },
+    "position": {
+      "current_position": 4,
+      "tyre_compound": "Hard"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 20.31,
+      "stint_lap_count": 8,
+      "tyre_temp_C": 91.2,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 144.7,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 65.09,
+      "interval_gap": 9.334
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:38:40.339000",
+    "lap_number": 26,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "DEFENSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.14,
+        "DEFENSIVE": 0.6,
+        "NEUTRAL": 0.26
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 37.3,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Yellow",
+      "incident_message": "Yellow flag - Turn 13",
+      "has_incident": true
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 107.296,
+      "lap_number": 26,
+      "delta_to_previous": 2.960000000000008,
+      "delta_status": "degrading",
+      "signal": "WARNING - Degradation detected"
+    },
+    "engine": {
+      "engine_power_pct": 65.58,
+      "throttle_pct": 66.51
+    },
+    "position": {
+      "current_position": 4,
+      "tyre_compound": "Hard"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 25.48,
+      "stint_lap_count": 9,
+      "tyre_temp_C": 91.5,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 145.8,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 63.28,
+      "interval_gap": 8.105
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:40:15.719000",
+    "lap_number": 27,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "NEUTRAL",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.2390343997889018,
+        "DEFENSIVE": 0.02,
+        "NEUTRAL": 0.7409656002110983
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 38.2,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 93.298,
+      "lap_number": 27,
+      "delta_to_previous": -13.998000000000005,
+      "delta_status": "improving",
+      "signal": "PUSH - Delta improving!"
+    },
+    "engine": {
+      "engine_power_pct": 85.99,
+      "throttle_pct": 86.71
+    },
+    "position": {
+      "current_position": 4,
+      "tyre_compound": "Hard"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 31.53,
+      "stint_lap_count": 10,
+      "tyre_temp_C": 85.7,
+      "expected_life_remaining": "Medium (10-20 laps)",
+      "tire_health_status": "FAIR"
+    },
+    "telemetry": {
+      "speed_kph": 199.9,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 61.41,
+      "interval_gap": 8.229
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:41:48.351000",
+    "lap_number": 28,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "NEUTRAL",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.2490343997889018,
+        "DEFENSIVE": 0.0,
+        "NEUTRAL": 0.7509656002110983
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 37.8,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 93.285,
+      "lap_number": 28,
+      "delta_to_previous": -0.01300000000000523,
+      "delta_status": "improving",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 87.43,
+      "throttle_pct": 87.65
+    },
+    "position": {
+      "current_position": 4,
+      "tyre_compound": "Hard"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 38.13,
+      "stint_lap_count": 11,
+      "tyre_temp_C": 88.4,
+      "expected_life_remaining": "Medium (10-20 laps)",
+      "tire_health_status": "FAIR"
+    },
+    "telemetry": {
+      "speed_kph": 212.5,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 59.54,
+      "interval_gap": 7.678
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:43:20.946000",
+    "lap_number": 29,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "NEUTRAL",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.06976958491104186,
+        "DEFENSIVE": 0.01,
+        "NEUTRAL": 0.9202304150889582
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 38.1,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 94.784,
+      "lap_number": 29,
+      "delta_to_previous": 1.4990000000000094,
+      "delta_status": "degrading",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 86.03,
+      "throttle_pct": 90.68
+    },
+    "position": {
+      "current_position": 4,
+      "tyre_compound": "Hard"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 45.5,
+      "stint_lap_count": 12,
+      "tyre_temp_C": 85.7,
+      "expected_life_remaining": "Medium (10-20 laps)",
+      "tire_health_status": "FAIR"
+    },
+    "telemetry": {
+      "speed_kph": 198.9,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 57.76,
+      "interval_gap": 8.852
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:44:51.621000",
+    "lap_number": 30,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "NEUTRAL",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.06862037343362759,
+        "DEFENSIVE": 0.08,
+        "NEUTRAL": 0.8513796265663724
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 34.8,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 94.966,
+      "lap_number": 30,
+      "delta_to_previous": 0.18199999999998795,
+      "delta_status": "degrading",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 81.89,
+      "throttle_pct": 82.77
+    },
+    "position": {
+      "current_position": 4,
+      "tyre_compound": "Hard"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 52.34,
+      "stint_lap_count": 13,
+      "tyre_temp_C": 85.0,
+      "expected_life_remaining": "Medium (10-20 laps)",
+      "tire_health_status": "FAIR"
+    },
+    "telemetry": {
+      "speed_kph": 187.4,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 56.03,
+      "interval_gap": 11.886
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:46:24.872000",
+    "lap_number": 31,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "NEUTRAL",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.02025032938076416,
+        "DEFENSIVE": 0.34,
+        "NEUTRAL": 0.6397496706192358
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 36.0,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 95.578,
+      "lap_number": 31,
+      "delta_to_previous": 0.612000000000009,
+      "delta_status": "degrading",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 83.85,
+      "throttle_pct": 82.04
+    },
+    "position": {
+      "current_position": 4,
+      "tyre_compound": "Hard"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 60.19,
+      "stint_lap_count": 14,
+      "tyre_temp_C": 90.6,
+      "expected_life_remaining": "Low (5-10 laps)",
+      "tire_health_status": "DEGRADING"
+    },
+    "telemetry": {
+      "speed_kph": 194.5,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 54.23,
+      "interval_gap": 11.035
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:47:58.880000",
+    "lap_number": 32,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "DEFENSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.03,
+        "DEFENSIVE": 0.55,
+        "NEUTRAL": 0.42
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 39.0,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 94.994,
+      "lap_number": 32,
+      "delta_to_previous": -0.5840000000000032,
+      "delta_status": "improving",
+      "signal": "PUSH - Delta improving!"
+    },
+    "engine": {
+      "engine_power_pct": 80.22,
+      "throttle_pct": 75.21
+    },
+    "position": {
+      "current_position": 4,
+      "tyre_compound": "Hard"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 69.96,
+      "stint_lap_count": 15,
+      "tyre_temp_C": 92.3,
+      "expected_life_remaining": "Low (5-10 laps)",
+      "tire_health_status": "DEGRADING"
+    },
+    "telemetry": {
+      "speed_kph": 175.4,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 52.5,
+      "interval_gap": 11.971
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:49:30.583000",
+    "lap_number": 33,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "DEFENSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.1,
+        "DEFENSIVE": 0.89,
+        "NEUTRAL": 0.01
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 36.1,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 120.895,
+      "lap_number": 33,
+      "delta_to_previous": 25.900999999999996,
+      "delta_status": "degrading",
+      "signal": "WARNING - Degradation detected"
+    },
+    "engine": {
+      "engine_power_pct": 97.77,
+      "throttle_pct": 93.64
+    },
+    "position": {
+      "current_position": 5,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 0.0,
+      "stint_lap_count": 0,
+      "tyre_temp_C": 55.0,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 250.1,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 50.75,
+      "interval_gap": 12.37
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:51:05.164000",
+    "lap_number": 34,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "AGGRESSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.88,
+        "DEFENSIVE": 0.01,
+        "NEUTRAL": 0.11
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 37.3,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 95.067,
+      "lap_number": 34,
+      "delta_to_previous": -25.828000000000003,
+      "delta_status": "improving",
+      "signal": "PUSH - Delta improving!"
+    },
+    "engine": {
+      "engine_power_pct": 97.41,
+      "throttle_pct": 95.25
+    },
+    "position": {
+      "current_position": 5,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 0.71,
+      "stint_lap_count": 1,
+      "tyre_temp_C": 69.0,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 239.1,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 49.0,
+      "interval_gap": 10.796
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:52:36.603000",
+    "lap_number": 35,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "AGGRESSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.8752903739061257,
+        "DEFENSIVE": 0.01,
+        "NEUTRAL": 0.1147096260938743
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 38.2,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 93.535,
+      "lap_number": 35,
+      "delta_to_previous": -1.5319999999999965,
+      "delta_status": "improving",
+      "signal": "PUSH - Delta improving!"
+    },
+    "engine": {
+      "engine_power_pct": 96.34,
+      "throttle_pct": 97.51
+    },
+    "position": {
+      "current_position": 5,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 1.71,
+      "stint_lap_count": 2,
+      "tyre_temp_C": 83.0,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 235.5,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 47.15,
+      "interval_gap": 10.09
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:54:11.192000",
+    "lap_number": 36,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "DEFENSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.16,
+        "DEFENSIVE": 0.78,
+        "NEUTRAL": 0.06
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 33.7,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Yellow",
+      "incident_message": "Yellow flag - Turn 9",
+      "has_incident": true
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 104.919,
+      "lap_number": 36,
+      "delta_to_previous": 11.384,
+      "delta_status": "degrading",
+      "signal": "WARNING - Degradation detected"
+    },
+    "engine": {
+      "engine_power_pct": 70.4,
+      "throttle_pct": 75.4
+    },
+    "position": {
+      "current_position": 5,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 2.72,
+      "stint_lap_count": 3,
+      "tyre_temp_C": 89.2,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 170.0,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 45.32,
+      "interval_gap": 10.41
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:55:43.079000",
+    "lap_number": 37,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "DEFENSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.17,
+        "DEFENSIVE": 0.69,
+        "NEUTRAL": 0.14
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 38.0,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Yellow",
+      "incident_message": "Yellow flag - Turn 11",
+      "has_incident": true
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 104.794,
+      "lap_number": 37,
+      "delta_to_previous": -0.125,
+      "delta_status": "improving",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 69.83,
+      "throttle_pct": 70.74
+    },
+    "position": {
+      "current_position": 5,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 4.37,
+      "stint_lap_count": 4,
+      "tyre_temp_C": 94.2,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 156.5,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 43.61,
+      "interval_gap": 9.779
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:57:16.791000",
+    "lap_number": 38,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "DEFENSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.08,
+        "DEFENSIVE": 0.78,
+        "NEUTRAL": 0.14
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 34.8,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Yellow",
+      "incident_message": "Yellow flag - Turn 11",
+      "has_incident": true
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 103.588,
+      "lap_number": 38,
+      "delta_to_previous": -1.206000000000003,
+      "delta_status": "improving",
+      "signal": "PUSH - Delta improving!"
+    },
+    "engine": {
+      "engine_power_pct": 68.74,
+      "throttle_pct": 67.93
+    },
+    "position": {
+      "current_position": 5,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 6.05,
+      "stint_lap_count": 5,
+      "tyre_temp_C": 93.2,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 168.4,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 41.85,
+      "interval_gap": 10.159
+    }
+  },
+  {
+    "timestamp": "2024-10-20T14:58:48.419000",
+    "lap_number": 39,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "DEFENSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.07,
+        "DEFENSIVE": 0.8,
+        "NEUTRAL": 0.13
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 33.9,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Yellow",
+      "incident_message": "Yellow flag - Turn 5",
+      "has_incident": true
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 103.24,
+      "lap_number": 39,
+      "delta_to_previous": -0.347999999999999,
+      "delta_status": "improving",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 68.0,
+      "throttle_pct": 73.8
+    },
+    "position": {
+      "current_position": 5,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 7.93,
+      "stint_lap_count": 6,
+      "tyre_temp_C": 90.8,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 157.7,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 40.04,
+      "interval_gap": 10.131
+    }
+  },
+  {
+    "timestamp": "2024-10-20T15:00:19.604000",
+    "lap_number": 40,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "DEFENSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.1,
+        "DEFENSIVE": 0.77,
+        "NEUTRAL": 0.13
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 33.8,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Yellow",
+      "incident_message": "Yellow flag - Turn 1",
+      "has_incident": true
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 103.3,
+      "lap_number": 40,
+      "delta_to_previous": 0.060000000000002274,
+      "delta_status": "degrading",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 69.86,
+      "throttle_pct": 74.01
+    },
+    "position": {
+      "current_position": 5,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 10.11,
+      "stint_lap_count": 7,
+      "tyre_temp_C": 94.0,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 150.0,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 38.32,
+      "interval_gap": 11.332
+    }
+  },
+  {
+    "timestamp": "2024-10-20T15:01:53.519000",
+    "lap_number": 41,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "DEFENSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.16,
+        "DEFENSIVE": 0.66,
+        "NEUTRAL": 0.18
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 36.7,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Yellow",
+      "incident_message": "Yellow flag - Turn 3",
+      "has_incident": true
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 104.566,
+      "lap_number": 41,
+      "delta_to_previous": 1.2660000000000053,
+      "delta_status": "degrading",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 67.74,
+      "throttle_pct": 67.59
+    },
+    "position": {
+      "current_position": 5,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 13.14,
+      "stint_lap_count": 8,
+      "tyre_temp_C": 92.4,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 156.5,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 36.51,
+      "interval_gap": 11.6
+    }
+  },
+  {
+    "timestamp": "2024-10-20T15:03:27.324000",
+    "lap_number": 42,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "AGGRESSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.5052836820686997,
+        "DEFENSIVE": 0.07430627871362941,
+        "NEUTRAL": 0.420410039217671
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 38.1,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 91.373,
+      "lap_number": 42,
+      "delta_to_previous": -13.192999999999998,
+      "delta_status": "improving",
+      "signal": "PUSH - Delta improving!"
+    },
+    "engine": {
+      "engine_power_pct": 91.82,
+      "throttle_pct": 88.98
+    },
+    "position": {
+      "current_position": 5,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 16.88,
+      "stint_lap_count": 9,
+      "tyre_temp_C": 93.4,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 242.5,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 34.79,
+      "interval_gap": 10.547
+    }
+  },
+  {
+    "timestamp": "2024-10-20T15:04:59.931000",
+    "lap_number": 43,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "NEUTRAL",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.3687840704081376,
+        "DEFENSIVE": 0.06,
+        "NEUTRAL": 0.5712159295918624
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 34.6,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 91.338,
+      "lap_number": 43,
+      "delta_to_previous": -0.0350000000000108,
+      "delta_status": "improving",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 91.96,
+      "throttle_pct": 90.71
+    },
+    "position": {
+      "current_position": 5,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 20.16,
+      "stint_lap_count": 10,
+      "tyre_temp_C": 97.1,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 217.8,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 32.95,
+      "interval_gap": 11.747
+    }
+  },
+  {
+    "timestamp": "2024-10-20T15:06:33.674000",
+    "lap_number": 44,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "NEUTRAL",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.4296709810772058,
+        "DEFENSIVE": 0.07,
+        "NEUTRAL": 0.5003290189227942
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 35.8,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 90.638,
+      "lap_number": 44,
+      "delta_to_previous": -0.6999999999999886,
+      "delta_status": "improving",
+      "signal": "PUSH - Delta improving!"
+    },
+    "engine": {
+      "engine_power_pct": 90.59,
+      "throttle_pct": 90.58
+    },
+    "position": {
+      "current_position": 5,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 24.09,
+      "stint_lap_count": 11,
+      "tyre_temp_C": 91.2,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 232.5,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 31.18,
+      "interval_gap": 12.853
+    }
+  },
+  {
+    "timestamp": "2024-10-20T15:08:04.753000",
+    "lap_number": 45,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "NEUTRAL",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.38812276567176585,
+        "DEFENSIVE": 0.06,
+        "NEUTRAL": 0.5518772343282342
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 34.3,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 91.271,
+      "lap_number": 45,
+      "delta_to_previous": 0.6329999999999956,
+      "delta_status": "degrading",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 90.78,
+      "throttle_pct": 88.92
+    },
+    "position": {
+      "current_position": 5,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 27.86,
+      "stint_lap_count": 12,
+      "tyre_temp_C": 87.4,
+      "expected_life_remaining": "High (20+ laps)",
+      "tire_health_status": "GOOD"
+    },
+    "telemetry": {
+      "speed_kph": 220.0,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 29.45,
+      "interval_gap": 12.636
+    }
+  },
+  {
+    "timestamp": "2024-10-20T15:09:38.806000",
+    "lap_number": 46,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "NEUTRAL",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.29674105965544945,
+        "DEFENSIVE": 0.06,
+        "NEUTRAL": 0.6432589403445504
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 35.1,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 92.469,
+      "lap_number": 46,
+      "delta_to_previous": 1.1979999999999933,
+      "delta_status": "degrading",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 89.7,
+      "throttle_pct": 94.81
+    },
+    "position": {
+      "current_position": 5,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 32.21,
+      "stint_lap_count": 13,
+      "tyre_temp_C": 91.5,
+      "expected_life_remaining": "Medium (10-20 laps)",
+      "tire_health_status": "FAIR"
+    },
+    "telemetry": {
+      "speed_kph": 216.8,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 27.68,
+      "interval_gap": 9.769
+    }
+  },
+  {
+    "timestamp": "2024-10-20T15:11:10.180000",
+    "lap_number": 47,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "NEUTRAL",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.19283159463487334,
+        "DEFENSIVE": 0.05,
+        "NEUTRAL": 0.7571684053651266
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 37.9,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 92.718,
+      "lap_number": 47,
+      "delta_to_previous": 0.24900000000000944,
+      "delta_status": "degrading",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 86.56,
+      "throttle_pct": 83.36
+    },
+    "position": {
+      "current_position": 5,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 37.95,
+      "stint_lap_count": 14,
+      "tyre_temp_C": 94.4,
+      "expected_life_remaining": "Medium (10-20 laps)",
+      "tire_health_status": "FAIR"
+    },
+    "telemetry": {
+      "speed_kph": 216.9,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 25.85,
+      "interval_gap": 12.942
+    }
+  },
+  {
+    "timestamp": "2024-10-20T15:12:43.689000",
+    "lap_number": 48,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "NEUTRAL",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.18512493476832564,
+        "DEFENSIVE": 0.04097435897435897,
+        "NEUTRAL": 0.7739007062573152
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 34.0,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 93.218,
+      "lap_number": 48,
+      "delta_to_previous": 0.5,
+      "delta_status": "degrading",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 86.18,
+      "throttle_pct": 87.14
+    },
+    "position": {
+      "current_position": 5,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 42.36,
+      "stint_lap_count": 15,
+      "tyre_temp_C": 90.9,
+      "expected_life_remaining": "Medium (10-20 laps)",
+      "tire_health_status": "FAIR"
+    },
+    "telemetry": {
+      "speed_kph": 212.5,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 24.04,
+      "interval_gap": 12.337
+    }
+  },
+  {
+    "timestamp": "2024-10-20T15:14:16.384000",
+    "lap_number": 49,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "NEUTRAL",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.13,
+        "DEFENSIVE": 0.18097435897435898,
+        "NEUTRAL": 0.689025641025641
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 37.3,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 92.294,
+      "lap_number": 49,
+      "delta_to_previous": -0.9240000000000066,
+      "delta_status": "improving",
+      "signal": "PUSH - Delta improving!"
+    },
+    "engine": {
+      "engine_power_pct": 83.21,
+      "throttle_pct": 86.99
+    },
+    "position": {
+      "current_position": 5,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 48.55,
+      "stint_lap_count": 16,
+      "tyre_temp_C": 93.0,
+      "expected_life_remaining": "Medium (10-20 laps)",
+      "tire_health_status": "FAIR"
+    },
+    "telemetry": {
+      "speed_kph": 218.3,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 22.32,
+      "interval_gap": 13.452
+    }
+  },
+  {
+    "timestamp": "2024-10-20T15:15:47.555000",
+    "lap_number": 50,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "NEUTRAL",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.010250329380764162,
+        "DEFENSIVE": 0.27097435897435895,
+        "NEUTRAL": 0.718775311644877
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 38.3,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 92.862,
+      "lap_number": 50,
+      "delta_to_previous": 0.5679999999999978,
+      "delta_status": "degrading",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 83.06,
+      "throttle_pct": 82.65
+    },
+    "position": {
+      "current_position": 5,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 55.6,
+      "stint_lap_count": 17,
+      "tyre_temp_C": 98.1,
+      "expected_life_remaining": "Medium (10-20 laps)",
+      "tire_health_status": "FAIR"
+    },
+    "telemetry": {
+      "speed_kph": 192.9,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 20.51,
+      "interval_gap": 11.585
+    }
+  },
+  {
+    "timestamp": "2024-10-20T15:17:21.805000",
+    "lap_number": 51,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "DEFENSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.012043010752688172,
+        "DEFENSIVE": 0.580974358974359,
+        "NEUTRAL": 0.40698263027295284
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 36.2,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 93.756,
+      "lap_number": 51,
+      "delta_to_previous": 0.8940000000000055,
+      "delta_status": "degrading",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 82.39,
+      "throttle_pct": 81.7
+    },
+    "position": {
+      "current_position": 5,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 61.72,
+      "stint_lap_count": 18,
+      "tyre_temp_C": 93.9,
+      "expected_life_remaining": "Low (5-10 laps)",
+      "tire_health_status": "DEGRADING"
+    },
+    "telemetry": {
+      "speed_kph": 195.0,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 18.81,
+      "interval_gap": 12.86
+    }
+  },
+  {
+    "timestamp": "2024-10-20T15:18:55.984000",
+    "lap_number": 52,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "DEFENSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.02,
+        "DEFENSIVE": 0.67,
+        "NEUTRAL": 0.31
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 36.1,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 94.278,
+      "lap_number": 52,
+      "delta_to_previous": 0.5220000000000056,
+      "delta_status": "degrading",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 78.47,
+      "throttle_pct": 82.77
+    },
+    "position": {
+      "current_position": 5,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 68.01,
+      "stint_lap_count": 19,
+      "tyre_temp_C": 88.0,
+      "expected_life_remaining": "Low (5-10 laps)",
+      "tire_health_status": "DEGRADING"
+    },
+    "telemetry": {
+      "speed_kph": 182.9,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 17.06,
+      "interval_gap": 15.668
+    }
+  },
+  {
+    "timestamp": "2024-10-20T15:20:28.238000",
+    "lap_number": 53,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "DEFENSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.0,
+        "DEFENSIVE": 0.7,
+        "NEUTRAL": 0.3
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 37.4,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 95.034,
+      "lap_number": 53,
+      "delta_to_previous": 0.7560000000000002,
+      "delta_status": "degrading",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 77.6,
+      "throttle_pct": 80.92
+    },
+    "position": {
+      "current_position": 5,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 75.33,
+      "stint_lap_count": 20,
+      "tyre_temp_C": 97.1,
+      "expected_life_remaining": "Low (5-10 laps)",
+      "tire_health_status": "DEGRADING"
+    },
+    "telemetry": {
+      "speed_kph": 174.5,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 15.25,
+      "interval_gap": 14.028
+    }
+  },
+  {
+    "timestamp": "2024-10-20T15:21:58.418000",
+    "lap_number": 54,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "DEFENSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.0,
+        "DEFENSIVE": 1.0,
+        "NEUTRAL": 0.0
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 33.3,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 118.562,
+      "lap_number": 54,
+      "delta_to_previous": 23.52799999999999,
+      "delta_status": "degrading",
+      "signal": "WARNING - Degradation detected"
+    },
+    "engine": {
+      "engine_power_pct": 77.42,
+      "throttle_pct": 76.0
+    },
+    "position": {
+      "current_position": 6,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 79.93,
+      "stint_lap_count": 21,
+      "tyre_temp_C": 95.3,
+      "expected_life_remaining": "Low (5-10 laps)",
+      "tire_health_status": "DEGRADING"
+    },
+    "telemetry": {
+      "speed_kph": 172.8,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 13.5,
+      "interval_gap": 20.052
+    }
+  },
+  {
+    "timestamp": "2024-10-20T15:23:33.332000",
+    "lap_number": 55,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "DEFENSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.0,
+        "DEFENSIVE": 0.97,
+        "NEUTRAL": 0.03
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 34.4,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 119.035,
+      "lap_number": 55,
+      "delta_to_previous": 0.472999999999999,
+      "delta_status": "degrading",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 75.73,
+      "throttle_pct": 75.16
+    },
+    "position": {
+      "current_position": 8,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 85.38,
+      "stint_lap_count": 22,
+      "tyre_temp_C": 94.6,
+      "expected_life_remaining": "Critical (<5 laps)",
+      "tire_health_status": "CRITICAL"
+    },
+    "telemetry": {
+      "speed_kph": 165.1,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 11.8,
+      "interval_gap": 24.261
+    }
+  },
+  {
+    "timestamp": "2024-10-20T15:25:05.319000",
+    "lap_number": 56,
+    "driver": "HAM",
+    "season": 2024,
+    "strategy_recommendation": {
+      "recommended_strategy": "DEFENSIVE",
+      "confidence_scores": {
+        "AGGRESSIVE": 0.05,
+        "DEFENSIVE": 0.82,
+        "NEUTRAL": 0.13
+      }
+    },
+    "weather": {
+      "condition": "Clear",
+      "rainfall_mm": 0.0,
+      "air_temperature_C": 38.0,
+      "is_raining": false
+    },
+    "incidents": {
+      "flag_status": "Green",
+      "incident_message": null,
+      "has_incident": false
+    },
+    "lap_time_analysis": {
+      "current_lap_time": 120.61,
+      "lap_number": 56,
+      "delta_to_previous": 1.5750000000000028,
+      "delta_status": "degrading",
+      "signal": "MAINTAIN - Stable pace"
+    },
+    "engine": {
+      "engine_power_pct": 73.84,
+      "throttle_pct": 74.99
+    },
+    "position": {
+      "current_position": 9,
+      "tyre_compound": "Medium"
+    },
+    "tire_life": {
+      "tyre_wear_pct": 93.73,
+      "stint_lap_count": 23,
+      "tyre_temp_C": 93.9,
+      "expected_life_remaining": "Critical (<5 laps)",
+      "tire_health_status": "CRITICAL"
+    },
+    "telemetry": {
+      "speed_kph": 158.0,
+      "drs_status": "Inactive",
+      "fuel_load_kg": 10.09,
+      "interval_gap": 29.108
+    }
+  }
+]

@@ -1,4 +1,4 @@
-'use client'; // Important for client-side components with useState and useEffect
+'use client';
 
 import React, { useState, useEffect } from 'react';
 
@@ -50,55 +50,55 @@ const StrategyRecommendation = () => {
   const highestStrategies = findHighestStrategies(strategy);
 
   return (
-    <div className="bg-gray-800 p-4 rounded-lg w-full max-w-md">
-      <div className="text-white text-left mb-4 font-bold">
+    <div className="bg-gray-800 p-8 rounded-lg w-full h-full flex flex-col justify-center">
+      <div className="text-white text-2xl mb-8 font-bold">
         Recommended Strategy Type
       </div>
-      <div className="space-y-2">
+      <div className="space-y-6">
         {/* Aggressive Strategy */}
         <div className="flex items-center">
-          <div className="w-24 text-white text-sm">Aggressive</div>
-          <div className="flex-grow bg-gray-700 rounded-full h-2.5 mr-2">
+          <div className="w-32 text-white text-lg">Aggressive</div>
+          <div className="flex-grow bg-gray-700 rounded-full h-4 mr-4">
             <div 
-              className={`h-2.5 rounded-full transition-all duration-500 ease-in-out ${
+              className={`h-4 rounded-full transition-all duration-500 ease-in-out ${
                 highestStrategies.aggressive ? 'bg-blue-300' : 'bg-gray-500'
               }`}
               style={{ width: `${strategy.aggressive}%` }}
             ></div>
           </div>
-          <div className="text-white text-sm w-10 text-right">
+          <div className="text-white text-lg w-16 text-right">
             {strategy.aggressive}%
           </div>
         </div>
 
         {/* Neutral Strategy */}
         <div className="flex items-center">
-          <div className="w-24 text-white text-sm">Neutral</div>
-          <div className="flex-grow bg-gray-700 rounded-full h-2.5 mr-2">
+          <div className="w-32 text-white text-lg">Neutral</div>
+          <div className="flex-grow bg-gray-700 rounded-full h-4 mr-4">
             <div 
-              className={`h-2.5 rounded-full transition-all duration-500 ease-in-out ${
+              className={`h-4 rounded-full transition-all duration-500 ease-in-out ${
                 highestStrategies.neutral ? 'bg-blue-300' : 'bg-gray-500'
               }`}
               style={{ width: `${strategy.neutral}%` }}
             ></div>
           </div>
-          <div className="text-white text-sm w-10 text-right">
+          <div className="text-white text-lg w-16 text-right">
             {strategy.neutral}%
           </div>
         </div>
 
         {/* Defensive Strategy */}
         <div className="flex items-center">
-          <div className="w-24 text-white text-sm">Defensive</div>
-          <div className="flex-grow bg-gray-700 rounded-full h-2.5 mr-2">
+          <div className="w-32 text-white text-lg">Defensive</div>
+          <div className="flex-grow bg-gray-700 rounded-full h-4 mr-4">
             <div 
-              className={`h-2.5 rounded-full transition-all duration-500 ease-in-out ${
+              className={`h-4 rounded-full transition-all duration-500 ease-in-out ${
                 highestStrategies.defensive ? 'bg-blue-300' : 'bg-gray-500'
               }`}
               style={{ width: `${strategy.defensive}%` }}
             ></div>
           </div>
-          <div className="text-white text-sm w-10 text-right">
+          <div className="text-white text-lg w-16 text-right">
             {strategy.defensive}%
           </div>
         </div>
