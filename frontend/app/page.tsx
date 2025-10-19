@@ -1,38 +1,37 @@
-// frontend/app/page.tsx
-
 "use client";
 
 import React, { useState, useEffect, useCallback } from 'react';
 import TrackTemperature from './components/TrackTemperature';
-import Rainfall from './components/Rainfall';
-import FlagComponent from './components/FlagComponent';
+import LapSignalBox from './components/LapSignalBox';
+import FlagComponent, { FlagType } from './components/FlagComponent';
 import StrategyRecommendation from './components/StrategyRecommendation';
 import LapTimeGraph from './components/LapTimeGraph';
 import CurrentPositionBox from './components/CurrentPositionBox';
 import TyreLifeBox from './components/TyreLifeBox';
 import EnginePowerBox from './components/EnginePowerBox';
 
-// API Configuration
-const API_BASE_URL = ''; // Uses Next.js proxy
-
-// --- TYPE DEFINITIONS MATCHING FASTAPI RESPONSE ---
+// Define more robust interface for race data
 interface RaceData {
-  status: string;
+  timestamp: string;
   current_lap: number;
   raw_lap_time: number;
-  
-  // Strategy
-  ML_Recommendation: string;
-  ML_Confidence: number;
-  
-  // Dashboard Metrics
-  throttle_percent: number;
   track_temp: number;
   rainfall_mm: number;
+  throttle_percent: number;
   current_position: number;
   tyre_compound: string;
-  stint_lap_count: number;
+  stint_lap_count: number;  // ADD THIS
+  tyre_wear_pct: number;     // ADD THIS
+  flag_status: string;
+  incident_message: string;  // ADD THIS
   delta_message: string;
+  ML_Recommendation: string;
+  ML_Confidence: {
+    AGGRESSIVE: number;
+    NEUTRAL: number;
+    DEFENSIVE: number;
+  };
+  status: string;
 }
 
 interface RaceInfo {
@@ -43,58 +42,77 @@ interface RaceInfo {
   circuit: string;
 }
 
-interface LapTimeData {
-  lap: number;
-  time: number;
-}
-
 export default function Dashboard() {
-  // State initialization
+  // Enhanced state management
   const [raceInfo, setRaceInfo] = useState<RaceInfo | null>(null);
   const [currentLap, setCurrentLap] = useState<RaceData | null>(null);
-  const [lapTimeHistory, setLapTimeHistory] = useState<LapTimeData[]>([]);
+  const [lapTimeHistory, setLapTimeHistory] = useState<{lap: number, time: number}[]>([]);
   const [isRaceActive, setIsRaceActive] = useState(false);
   const [raceStatus, setRaceStatus] = useState('Ready');
   const [error, setError] = useState<string | null>(null);
-  
-  // --- FETCH METADATA ON LOAD ---
+
+  // Fetch race information on component mount
   useEffect(() => {
     const fetchRaceInfo = async () => {
       try {
-        const response = await fetch(`${API_BASE_URL}/api/race/info`);
-        if (!response.ok) throw new Error(`Info API Error: ${response.status}`);
+        const response = await fetch('/api/race/info');
+        
+        if (!response.ok) {
+          const errorText = await response.text();
+          console.error('Detailed Race Info Error:', {
+            status: response.status,
+            statusText: response.statusText,
+            body: errorText
+          });
+          throw new Error(`Race Info API Error: ${response.status}`);
+        }
         
         const data: RaceInfo = await response.json();
         setRaceInfo(data);
       } catch (err) {
-        console.error('Error fetching race info:', err);
-        setError("Failed to load race metadata. Check FastAPI server.");
+        console.error('Fetch Race Info Error:', err);
+        setError(`Failed to load race metadata: ${err instanceof Error ? err.message : 'Unknown error'}`);
       }
     };
-    fetchRaceInfo();
-  }, []); // Run only once on mount
 
-  // Fetch next lap from API
+    fetchRaceInfo();
+  }, []);
+
+  // Fetch next lap data
   const fetchNextLap = useCallback(async () => {
     if (!raceInfo) return; 
 
     try {
-      const response = await fetch(`${API_BASE_URL}/api/feed`);
+      const response = await fetch('/api/feed');
       
       if (!response.ok) {
+        const errorText = await response.text();
+        console.error('Detailed Feed Error:', {
+          status: response.status,
+          statusText: response.statusText,
+          body: errorText
+        });
+  
+        if (response.status === 404) {
+          console.error('API Endpoint Not Found. Check backend routing.');
+          setError('API Endpoint Not Found. Ensure backend is running.');
+        }
+  
         if (response.status === 410) { 
           setIsRaceActive(false);
           setRaceStatus('Race Finished');
           return;
         }
-        throw new Error(`API Error: ${response.status}`);
+  
+        throw new Error(`API Error: ${response.status} - ${errorText}`);
       }
-
+  
       const data: RaceData = await response.json();
+      console.log('Received lap data:', data); // DEBUG: Check what data is received
       setCurrentLap(data);
       setRaceStatus(data.status);
       
-      // Update lap time history only if lap time is valid
+      // Update lap time history
       if (data.raw_lap_time > 0) {
         setLapTimeHistory(prev => [
           ...prev,
@@ -105,21 +123,15 @@ export default function Dashboard() {
       setError(null);
     } catch (err) {
       console.error('Error fetching lap data:', err);
-      if (err instanceof Error && err.message.includes("410")) {
-        setIsRaceActive(false);
-        setRaceStatus('Race Finished');
-      } else {
-        setError(err instanceof Error ? err.message : 'Unknown network/API error');
-        setIsRaceActive(false);
-      }
+      setError(err instanceof Error ? err.message : 'Unknown network/API error');
+      setIsRaceActive(false);
     }
   }, [raceInfo]);
 
-  // Start race simulation and reset API counter
+  // Start race simulation
   const startRace = useCallback(async () => {
-    // Reset API counter on the backend
     try {
-      const response = await fetch(`${API_BASE_URL}/api/reset`, { method: 'POST' });
+      const response = await fetch('/api/reset', { method: 'POST' });
       if (!response.ok) throw new Error("Failed to reset race");
     } catch (err) {
       console.error('Error resetting race:', err);
@@ -127,15 +139,10 @@ export default function Dashboard() {
 
     setIsRaceActive(true);
     setLapTimeHistory([]);
-    setCurrentLap(null); // Clear current lap data for clean start
+    setCurrentLap(null);
     setError(null);
-    fetchNextLap(); // Fetch the first lap
+    fetchNextLap();
   }, [fetchNextLap]);
-
-  // Pause/Resume race
-  const toggleRace = () => {
-    setIsRaceActive(!isRaceActive);
-  };
 
   // Auto-advance laps when race is active
   useEffect(() => {
@@ -148,51 +155,75 @@ export default function Dashboard() {
     return () => clearInterval(interval);
   }, [isRaceActive, fetchNextLap]);
 
-  // Helper functions for display
+  // Temperature conversion utility
   const celsiusToFahrenheit = (celsius: number): number => {
-    return (celsius * 9/5) + 32;
+    return Math.round((celsius * 9/5) + 32);
   };
 
-  const getFlagType = (flagStatus: string): 'none' | 'red' | 'yellow' => {
-    if (flagStatus.includes('YELLOW')) return 'yellow';
-    if (flagStatus.includes('RED')) return 'red';
-    // Use delta_message logic to trigger caution flags dynamically
-    if (currentLap?.delta_message.includes('WARNING') && isRaceActive) return 'yellow'; 
-    return 'none';
-  };
+  const toggleRace = useCallback(() => {
+    setIsRaceActive(prev => !prev);
+  }, []);
 
-  // --- MAPPED DATA FOR COMPONENTS ---
-  // Ensure we check if currentLap is available before mapping
+  // Mapped display data
   const displayData = {
-    // Strategy: Mock confidence scores based on the single recommendation
-    strategyConfidence: {
-      // NOTE: We distribute confidence across all three strategies for the bar chart visualization
-      // Here, we hard-set the recommended strategy's confidence and distribute the rest
-      aggressive: currentLap?.ML_Recommendation === 'Aggressive' ? currentLap.ML_Confidence : 10, 
-      neutral: currentLap?.ML_Recommendation === 'Neutral' ? currentLap.ML_Confidence : 60,
-      defensive: currentLap?.ML_Recommendation === 'Defense' ? currentLap.ML_Confidence : 30,
-      recommended: currentLap?.ML_Recommendation || 'N/A'
-    },
-    // Weather
     temperature: {
-      fahrenheit: currentLap ? celsiusToFahrenheit(currentLap.track_temp) : 0, 
+      fahrenheit: currentLap ? celsiusToFahrenheit(currentLap.track_temp) : 0,
       celsius: currentLap?.track_temp || 0
     },
-    rainfall: currentLap?.rainfall_mm || 0,
-    
-    // Flag 
-    flagType: getFlagType(currentLap?.delta_message || ''),
-    
-    // Position & Compound
+    strategyConfidence: (() => {
+      if (!currentLap) {
+        return {
+          aggressive: 10,
+          neutral: 60,
+          defensive: 30,
+          recommended: 'N/A'
+        };
+      }
+  
+      const confidenceScores = currentLap.ML_Confidence || {
+        AGGRESSIVE: 0.1,
+        NEUTRAL: 0.6,
+        DEFENSIVE: 0.3
+      };
+  
+      return {
+        aggressive: Math.round((confidenceScores.AGGRESSIVE || 0) * 100),
+        neutral: Math.round((confidenceScores.NEUTRAL || 0) * 100),
+        defensive: Math.round((confidenceScores.DEFENSIVE || 0) * 100),
+        recommended: currentLap.ML_Recommendation || 'N/A'
+      };
+    })(),
     currentPosition: {
       position: currentLap ? `P${currentLap.current_position}` : 'N/A',
       compound: currentLap?.tyre_compound || 'N/A'
     },
-    // Tyre Life & Engine
-    tyreLife: currentLap ? `${currentLap.stint_lap_count} LAPS` : 'N/A', 
+    // FIX: Use stint_lap_count instead of current_lap
+    tyreLife: currentLap ? `${currentLap.stint_lap_count} LAPS` : 'N/A',
     enginePower: currentLap ? `${Math.round(currentLap.throttle_percent)}%` : '0%',
-    // Messages
-    lapTimeSignal: currentLap?.delta_message || (currentLap ? 'AWAITING NEXT LAP' : 'READY TO START')
+    lapTimeSignal: currentLap?.delta_message || 'READY TO START',
+    // FIX: Improved flag detection with incident message
+    flagType: (() => {
+      if (!currentLap) return 'none';
+      
+      const flagStatus = currentLap.flag_status;
+      const incidentMsg = currentLap.incident_message;
+      
+      console.log('Flag Status:', flagStatus, 'Incident:', incidentMsg); // DEBUG
+      
+      // Check for Yellow flag or Safety Car
+      if (flagStatus === 'Yellow' || flagStatus === 'Safety Car') {
+        return 'yellow';
+      }
+      
+      // Check for Red flag
+      if (flagStatus === 'Red') {
+        return 'red';
+      }
+      
+      return 'none';
+    })() as FlagType,
+    // ADD: Include incident message
+    incidentMessage: currentLap?.incident_message || '',
   };
 
   return (
@@ -201,7 +232,6 @@ export default function Dashboard() {
       <div className="bg-black text-white pl-4 pr-4 pt-3 pb-3 rounded-b-xl shadow-lg">
         <div className="flex items-center justify-between">
           <div className="flex items-center text-lg">
-            {/* FIX: Use raceInfo state for dynamic metadata */}
             <span className="text-white font-bold mr-2">Race:</span>
             <span className="text-white mr-4">{raceInfo?.circuit || 'Loading...'} {raceInfo?.season} GP</span>
             <span className="text-white font-bold mr-2">Driver:</span>
@@ -216,7 +246,6 @@ export default function Dashboard() {
             <div className="text-white">
               Status: {raceStatus}
             </div>
-            {/* Control Buttons (Logic remains the same) */}
             {!isRaceActive && raceStatus !== 'Race Finished' && (
               <button
                 onClick={startRace}
@@ -252,16 +281,15 @@ export default function Dashboard() {
           </div>
         </div>
         
-        {/* Lap Time Signal */}
-        {displayData.lapTimeSignal && (
-          <div className={`mt-2 font-bold ${
-            displayData.lapTimeSignal.includes('WARNING') ? 'text-red-500' :
-            displayData.lapTimeSignal.includes('PUSH') ? 'text-green-500' :
-            'text-blue-500'
-          }`}>
-            📊 {displayData.lapTimeSignal}
-          </div>
-        )}
+        {/* Lap Time Signal & Incident Message */}
+        <div className="mt-2 space-y-1">
+          {/* Show incident message when present */}
+          {displayData.incidentMessage && (
+            <div className="font-bold text-yellow-400 animate-pulse">
+              🚩 {displayData.incidentMessage}
+            </div>
+          )}
+        </div>
       </div>
       
       {/* Dashboard Content */}
@@ -272,10 +300,13 @@ export default function Dashboard() {
             <TrackTemperature temperature={displayData.temperature} />
           </div>
           <div className="row-span-1">
-            <Rainfall percentage={displayData.rainfall} />
+            <LapSignalBox signal={displayData.lapTimeSignal} />
           </div>
           <div className="row-span-1">
-            <FlagComponent flagType={displayData.flagType} />
+            <FlagComponent 
+              flagType={displayData.flagType}
+              incidentMessage={displayData.incidentMessage}  // PASS incident message
+            />
           </div>
         </div>
 

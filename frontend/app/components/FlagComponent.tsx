@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 
-type FlagType = 'none' | 'red' | 'yellow';
+export type FlagType = 'none' | 'red' | 'yellow';
 
 interface FlagComponentProps {
   flagType?: FlagType;
+  incidentMessage?: string;  // NEW: Added this prop
 }
 
-const FlagComponent: React.FC<FlagComponentProps> = ({ flagType = 'none' }) => {
+const FlagComponent: React.FC<FlagComponentProps> = ({ 
+  flagType = 'none',
+  incidentMessage = ''  // NEW: Added this parameter
+}) => {
   const [isWarningFlashEnabled, setIsWarningFlashEnabled] = useState(true);
 
   // Determine background color and text based on flag type
@@ -27,7 +31,7 @@ const FlagComponent: React.FC<FlagComponentProps> = ({ flagType = 'none' }) => {
       default:
         return {
           bgColor: 'bg-[#2C2C2C]',
-          text: 'NONE',
+          text: 'GREEN',  // CHANGED: Was 'NONE', now 'GREEN'
           blinkClass: ''
         };
     }
@@ -40,21 +44,29 @@ const FlagComponent: React.FC<FlagComponentProps> = ({ flagType = 'none' }) => {
       <div className="text-[#D4D4D4] text-lg mb-2 uppercase tracking-wider">
         Flag Status
       </div>
-      <div className={`
-        text-white 
-        text-4xl 
-        font-bold 
-        py-4 
-        rounded-lg 
-        text-center 
-        flex-grow 
-        flex 
-        items-center 
-        justify-center
-        ${bgColor} 
-        ${blinkClass}
-      `}>
-        {text}
+      
+      {/* CHANGED: Wrapped in flex container */}
+      <div className="flex-grow flex flex-col justify-center">
+        {/* Flag Status */}
+        <div className={`
+          text-white 
+          text-4xl 
+          font-bold 
+          py-4 
+          rounded-lg 
+          text-center 
+          ${bgColor} 
+          ${blinkClass}
+        `}>
+          {text}
+        </div>
+        
+        {/* NEW: Incident Message Display */}
+        {incidentMessage && flagType !== 'none' && (
+          <div className="mt-3 text-yellow-300 text-sm font-semibold bg-black/50 rounded px-2 py-2 break-words">
+            {incidentMessage}
+          </div>
+        )}
       </div>
       
       <div className="flex items-center mt-2">
