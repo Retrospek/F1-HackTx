@@ -55,7 +55,6 @@ class MDNNetwork(nn.Module):
             nn.Linear(128, 64),
             nn.ReLU(),
             nn.Linear(64, latent_dim),
-            nn.ReLU() # Threshold at 0
         )
 
         # Each Gaussian needs mu, sigma, and a mixture weight (pi)
@@ -69,38 +68,31 @@ class MDNNetwork(nn.Module):
         h = self.net(x)
 
         mu = self.fc_mu(h)                         # shape: [B, K*out_dim]
-        sigma = torch.exp(self.fc_sigma(h)).clamp(min=1e-3)        # positive std
+        sigma = F.softplus(self.fc_sigma(h)) + 1e-3
+
         pi = F.softmax(self.fc_pi(h), dim=1)       # mixture weights sum to 1
 
-        # reshape for clarity
         mu = mu.view(-1, self.K, self.out_dim)
         sigma = sigma.view(-1, self.K, self.out_dim)
         
         return mu, sigma, pi
     
 def mdn_loss(y, mu, sigma, pi, eps=1e-8):
-    """
-    y: [B, out_dim]
-    mu: [B, K, out_dim]
-    sigma: [B, K, out_dim]
-    pi: [B, K]
-    """
-    # expand y to match mu/sigma shape
     if y.dim() == 1:
-        y = y.unsqueeze(-1)  # [B, 1] → [B, out_dim]
+        y = y.unsqueeze(-1)
 
     # Expand y to match [B, K, out_dim]
-    y_expanded = y.unsqueeze(1)          # [B, 1, out_dim]
-    y_expanded = y_expanded.expand_as(mu)  # [B, K, out_dim]
+    y_expanded = y.unsqueeze(1)  
+    y_expanded = y_expanded.expand_as(mu)  
 
-    # Gaussian log likelihood
+    # Gaussian log like...
     log_prob = -0.5 * ((y_expanded - mu) / sigma) ** 2 - torch.log(sigma) - 0.5 * np.log(2*np.pi)
     
-    # Sum over out_dim (for multi-dim targets)
-    log_prob = log_prob.sum(dim=2)  # [B, K]
+    # Sum over out_dim
+    log_prob = log_prob.sum(dim=2)
 
     # Add log mixture weights
-    log_weighted = log_prob + torch.log(pi + eps)  # [B, K]
+    log_weighted = log_prob + torch.log(pi + eps)
 
     # Log-sum-exp trick for stability
     max_log = torch.max(log_weighted, dim=1, keepdim=True)[0]  # [B,1]

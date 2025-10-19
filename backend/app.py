@@ -186,10 +186,10 @@ latent_dim = 64
 
 # Load model
 model = MDNNetwork(in_dim=in_dim, action_dim=action_dim, latent_dim=latent_dim, out_dim=out_dim)
-model.load_state_dict(torch.load(r"ml/mdn_model_4.pth", map_location="cpu"))
+model.load_state_dict(torch.load(r"ml/mdn_model_4_nt.pth", map_location="cpu"))
 model.eval()
 
-@app.get("/api/tyre/condition")
+@app.get("/api/tyrecondition")
 def get_tyre_class_prediction(data_path: str):
     df = pd.read_csv(data_path)
 
