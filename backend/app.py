@@ -3,6 +3,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List, Dict, Optional
+import uvicorn
 import sys
 import os
 import pandas as pd
