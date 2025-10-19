@@ -1,118 +1,45 @@
-# backend/app.py (or add to your existing FastAPI app)
+# backend/app.py (t elevant section, make sure to integrate this into your existing code)
 
-from fastapi import FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
-from typing import List, Dict, Optional
-from joblib import load
-import numpy as np
-import uvicorn
-import pandas as pd
-from typing import Dict
-from pydantic import BaseModel
+# ... (Previous imports and setup code) ...
 
-# --- Global Artifacts (Placeholders) ---
-# NOTE: These variables will hold your data and model once loaded later
-EMU_DATA = None # Will hold the 2024 Lap/Telemetry DataFrame
-MODEL = None 
-LE = None # Label Encoder
+# Global Artifacts (defined globally)
+EMU_DATA = None       
+MODEL = None          
+LE = None             
+MODEL_FEATURES = None 
+
+# Simulation State (defined globally)
 CURRENT_LAP_INDEX = 0 
 MAX_LAP = 0
+MAX_LAPS_TO_SHOW = 56 # Standard F1 race laps
 
-# --- Pydantic Schema for API Response ---
-class LapFeedResponse(BaseModel):
-    status: str
-    current_lap: int
-    raw_lap_time: float
-    ML_Recommendation: str
-    ML_Confidence: float
-    # Define placeholder types for other required dashboard metrics
-    throttle_percent: float
-    track_temp: float
-    rain_amount: float
-    
-# --- FastAPI Initialization ---
-app = FastAPI()
+# ... (The rest of your code) ...
 
-# --- Placeholder Function to Load Everything (Will be implemented after data is gathered)
-def load_global_state():
-    # When your data extraction runs, this will load all CSVs and ML models
-    print("Pre-loading data and ML models... (CURRENTLY PLACEHOLDER)")
-    global EMU_DATA, MAX_LAP
-    # For now, we load a dummy DataFrame to prevent errors
-    EMU_DATA = pd.DataFrame({'lap_number': [1, 2, 3], 'lap_duration': [90.0, 90.1, 90.2], 'track_temp': [30, 31, 32]})
-    MAX_LAP = len(EMU_DATA)
-    # The actual joblib loading and DataFrame merging logic goes here later.
-    
+# New Interface for static data
+class RaceInfo(BaseModel):
+    season: int
+    driver: str
+    total_laps: int
+    emulation_laps: int
+    circuit: str
 
-# --- API ROUTES ---
+# FIX: Add the new metadata endpoint
+@app.get("/api/race/info", response_model=RaceInfo)
+async def get_race_info():
+    """Get static race metadata (total laps, driver name, etc.)."""
+    global MAX_LAP
 
-@app.on_event("startup")
-def startup_event():
-    # This runs once when the server starts
-    load_global_state()
-
-
-@app.get('/api/feed', response_model=LapFeedResponse)
-async def get_lap_feed():
-    """Returns the next frame of race data and the ML prediction."""
-    global CURRENT_LAP_INDEX
+    if EMU_DATA is None:
+        # Raise 503 if data isn't loaded yet (frontend needs to handle this)
+        raise HTTPException(status_code=503, detail="Race data not yet loaded.")
     
-    if CURRENT_LAP_INDEX >= MAX_LAP:
-        return {"status": "Race Finished", "current_lap": MAX_LAP, "raw_lap_time": 0.0, 
-                "ML_Recommendation": "N/A", "ML_Confidence": 0.0, "throttle_percent": 0.0, "track_temp": 0.0, "rain_amount": 0.0}
-
-    # NOTE: The actual ML calculation logic will replace these placeholders
-    lap_data = EMU_DATA.iloc[CURRENT_LAP_INDEX]
-    
-    response = {
-        "status": "In Progress",
-        "current_lap": int(lap_data['lap_number']),
-        "raw_lap_time": float(lap_data['lap_duration']),
-        "ML_Recommendation": "Neutral", 
-        "ML_Confidence": 75.0,
-        "throttle_percent": 99.0,
-        "track_temp": float(lap_data['track_temp']),
-        "rain_amount": 0.0,
-    }
-    
-    CURRENT_LAP_INDEX += 1
-    return response
-
-# Example for the Lap Time Graph Data (returns cumulative data)
-@app.get('/api/laps/cumulative')
-def get_cumulative_laps():
-    """Returns all lap data up to the current lap for the graph."""
-    global CURRENT_LAP_INDEX
-    if CURRENT_LAP_INDEX == 0:
-        return []
-    
-    # Return the data rows already processed
-    df_history = EMU_DATA.head(CURRENT_LAP_INDEX)
-    
-    return df_history[['lap_number', 'lap_duration']].to_dict('list')
-
-weather_model = load(r'backend\ml\logistic_model.joblib')
-
-class WeatherPredictRequest(BaseModel):
-    laps: list[dict]
-
-@app.post("/api/weather/predict")
-async def get_weather_prediction(request: WeatherPredictRequest):
-    laps = request.laps
-    
-    if len(laps) != 10:   
-        raise HTTPException(status_code=400, detail=f"Expected {10} laps in the window")
-    
-    X_input = np.array([[lap['rainfall_mm'], lap['air_temperature_C']] for lap in laps]).flatten().reshape(1, -1)
-    
-    prediction = weather_model.predict(X_input)[0]
-    probability = weather_model.predict_proba(X_input)[0][1]
-    
+    # We are simulating COTA 2024 for Hamilton
     return {
-        "rain_prediction": int(prediction),
-        "probability": float(probability)
+        "season": 2024,
+        "driver": "Lewis Hamilton",
+        "total_laps": 56, # Hard-coded correct COTA laps
+        "emulation_laps": MAX_LAP,
+        "circuit": "COTA", 
     }
 
-# --- Run Server Command (to be executed in the terminal) ---
-if __name__ == '__main__':
-    uvicorn.run("app:app", host="127.0.0.1", port=5000, reload=True) # Use reload=True for hackathon
+# ... (The rest of your routes and __main__ block) ...

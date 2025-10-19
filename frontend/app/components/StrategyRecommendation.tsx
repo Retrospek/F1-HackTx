@@ -1,26 +1,25 @@
+// frontend/components/StrategyRecommendation.tsx
+
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-// Mock function to simulate ML strategy recommendation
-const getStrategyRecommendation = () => {
-  const strategies = [
-    { aggressive: 10, neutral: 80, defensive: 10 },
-    { aggressive: 40, neutral: 40, defensive: 20 },
-    { aggressive: 20, neutral: 60, defensive: 20 }
-  ];
-  return strategies[Math.floor(Math.random() * strategies.length)];
-};
+// --- TYPE DEFINITION ---
+interface StrategyConfidence {
+  aggressive: number;
+  neutral: number;
+  defensive: number;
+  recommended: string;
+}
 
-const StrategyRecommendation = () => {
-  const [strategy, setStrategy] = useState({
-    aggressive: 10,
-    neutral: 80,
-    defensive: 10
-  });
+interface StrategyRecommendationProps {
+  strategy: StrategyConfidence;
+}
+
+const StrategyRecommendation: React.FC<StrategyRecommendationProps> = ({ strategy }) => {
 
   // Determine the strategy type(s) with the highest percentage
-  const findHighestStrategies = (strategyObj) => {
+  const findHighestStrategies = (strategyObj: StrategyConfidence) => {
     const max = Math.max(
       strategyObj.aggressive, 
       strategyObj.neutral, 
@@ -33,73 +32,81 @@ const StrategyRecommendation = () => {
     };
   };
 
-  // Update strategy periodically (simulating ML analysis)
-  useEffect(() => {
-    const updateStrategy = () => {
-      const newStrategy = getStrategyRecommendation();
-      setStrategy(newStrategy);
-    };
-
-    // Update every 5 seconds (for demonstration)
-    const intervalId = setInterval(updateStrategy, 5000);
-
-    return () => clearInterval(intervalId);
-  }, []);
-
   // Determine which strategies are at the max
   const highestStrategies = findHighestStrategies(strategy);
 
+  // Helper to determine text color for the recommended strategy
+  const getRecColor = (rec: string) => {
+    if (rec.includes('Aggressive')) return 'text-red-500';
+    if (rec.includes('Defense')) return 'text-yellow-500';
+    return 'text-blue-500'; // FIX: Blue for Neutral/default
+  };
+  
+  // Helper to format the bar color
+  const getBarColor = (name: string, isHighest: boolean) => {
+    if (!isHighest) return 'bg-gray-500';
+    
+    if (name === 'Aggressive') return 'bg-red-500';
+    if (name === 'Defensive') return 'bg-yellow-500';
+    return 'bg-blue-500'; // FIX: Blue for the highest bar (Neutral)
+  }
+
+  // --- Main Render ---
   return (
-    <div className="bg-gray-800 p-8 rounded-lg w-full h-full flex flex-col justify-center">
-      <div className="text-white text-2xl mb-8 font-bold">
-        Recommended Strategy Type
+    <div className="bg-gray-800/80 p-6 rounded-xl w-full h-full flex flex-col justify-center border border-blue-600/50 shadow-lg">
+      <div className="text-gray-300 text-lg font-bold uppercase tracking-wider mb-2">
+        ML Recommended Strategy:
       </div>
-      <div className="space-y-6">
-        {/* Aggressive Strategy */}
+      <div className={`text-white text-4xl font-extrabold mb-8 ${getRecColor(strategy.recommended)}`}>
+        {strategy.recommended || 'AWAITING DATA'}
+      </div>
+      
+      <div className="space-y-4">
+        {/* Aggressive Strategy Bar */}
         <div className="flex items-center">
-          <div className="w-32 text-white text-lg">Aggressive</div>
-          <div className="flex-grow bg-gray-700 rounded-full h-4 mr-4">
+          <div className="w-24 text-white text-base">Aggressive</div>
+          <div className="flex-grow bg-gray-700 rounded-full h-3 mr-3">
             <div 
-              className={`h-4 rounded-full transition-all duration-500 ease-in-out ${
-                highestStrategies.aggressive ? 'bg-blue-300' : 'bg-gray-500'
+              className={`h-3 rounded-full transition-all duration-500 ease-in-out ${
+                getBarColor('Aggressive', highestStrategies.aggressive)
               }`}
               style={{ width: `${strategy.aggressive}%` }}
             ></div>
           </div>
-          <div className="text-white text-lg w-16 text-right">
-            {strategy.aggressive}%
+          <div className="text-white text-base w-12 text-right">
+            {strategy.aggressive.toFixed(1)}%
           </div>
         </div>
 
-        {/* Neutral Strategy */}
+        {/* Neutral Strategy Bar */}
         <div className="flex items-center">
-          <div className="w-32 text-white text-lg">Neutral</div>
-          <div className="flex-grow bg-gray-700 rounded-full h-4 mr-4">
+          <div className="w-24 text-white text-base">Neutral</div>
+          <div className="flex-grow bg-gray-700 rounded-full h-3 mr-3">
             <div 
-              className={`h-4 rounded-full transition-all duration-500 ease-in-out ${
-                highestStrategies.neutral ? 'bg-blue-300' : 'bg-gray-500'
+              className={`h-3 rounded-full transition-all duration-500 ease-in-out ${
+                getBarColor('Neutral', highestStrategies.neutral)
               }`}
               style={{ width: `${strategy.neutral}%` }}
             ></div>
           </div>
-          <div className="text-white text-lg w-16 text-right">
-            {strategy.neutral}%
+          <div className="text-white text-base w-12 text-right">
+            {strategy.neutral.toFixed(1)}%
           </div>
         </div>
 
-        {/* Defensive Strategy */}
+        {/* Defensive Strategy Bar */}
         <div className="flex items-center">
-          <div className="w-32 text-white text-lg">Defensive</div>
-          <div className="flex-grow bg-gray-700 rounded-full h-4 mr-4">
+          <div className="w-24 text-white text-base">Defensive</div>
+          <div className="flex-grow bg-gray-700 rounded-full h-3 mr-3">
             <div 
-              className={`h-4 rounded-full transition-all duration-500 ease-in-out ${
-                highestStrategies.defensive ? 'bg-blue-300' : 'bg-gray-500'
+              className={`h-3 rounded-full transition-all duration-500 ease-in-out ${
+                getBarColor('Defensive', highestStrategies.defensive)
               }`}
               style={{ width: `${strategy.defensive}%` }}
             ></div>
           </div>
-          <div className="text-white text-lg w-16 text-right">
-            {strategy.defensive}%
+          <div className="text-white text-base w-12 text-right">
+            {strategy.defensive.toFixed(1)}%
           </div>
         </div>
       </div>

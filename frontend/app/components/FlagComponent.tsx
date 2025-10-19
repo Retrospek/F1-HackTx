@@ -6,7 +6,7 @@ interface FlagComponentProps {
   flagType?: FlagType;
 }
 
-const FlagComponent: React.FC<FlagComponentProps> = ({ flagType = 'red' }) => {
+const FlagComponent: React.FC<FlagComponentProps> = ({ flagType = 'none' }) => {
   const [isWarningFlashEnabled, setIsWarningFlashEnabled] = useState(true);
 
   // Determine background color and text based on flag type
@@ -26,7 +26,7 @@ const FlagComponent: React.FC<FlagComponentProps> = ({ flagType = 'red' }) => {
         };
       default:
         return {
-          bgColor: 'bg-[#515151]',
+          bgColor: 'bg-[#2C2C2C]',
           text: 'NONE',
           blinkClass: ''
         };
@@ -36,24 +36,29 @@ const FlagComponent: React.FC<FlagComponentProps> = ({ flagType = 'red' }) => {
   const { bgColor, text, blinkClass } = getFlagStyles();
 
   return (
-    <div className="flex flex-col items-center space-y-2 ml-2 mt-8 w-full">
+    <div className="bg-[#2C2C2C] rounded-lg p-4 text-center h-full flex flex-col justify-between">
+      <div className="text-[#D4D4D4] text-lg mb-2 uppercase tracking-wider">
+        Flag Status
+      </div>
       <div className={`
         text-white 
         text-4xl 
         font-bold 
-        py-16 
-        px-12 
+        py-4 
         rounded-lg 
         text-center 
-        w-full
+        flex-grow 
+        flex 
+        items-center 
+        justify-center
         ${bgColor} 
         ${blinkClass}
       `}>
         {text}
       </div>
       
-      <div className="flex items-center space-x-2">
-        <span className="text-[#D4D4D4] text-lg">Warning Flash</span>
+      <div className="flex items-center mt-2">
+        <span className="text-[#D4D4D4] text-sm mr-4">Warning Flash</span>
         <label className="inline-flex items-center cursor-pointer">
           <input
             type="checkbox"
