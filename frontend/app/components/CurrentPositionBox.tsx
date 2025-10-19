@@ -1,71 +1,49 @@
 import React from 'react';
 
-interface CurrentPositionProps {
-  position?: string;
-  compound?: string;
+interface CurrentPositionBoxProps {
+  position: string;
+  compound: string;
 }
 
-const CurrentPositionBox: React.FC<CurrentPositionProps> = ({ 
-  position = 'N/A', 
-  compound = 'N/A' 
-}) => {
-  // Get compound color
-  const getCompoundColor = (comp: string) => {
-    switch (comp.toLowerCase()) {
+const CurrentPositionBox: React.FC<CurrentPositionBoxProps> = ({ position, compound }) => {
+  // Determine compound color
+  const getCompoundColor = () => {
+    switch (compound.toLowerCase()) {
       case 'soft':
-        return 'from-red-400 to-red-600';
+        return 'bg-red-500';
       case 'medium':
-        return 'from-yellow-400 to-yellow-600';
+        return 'bg-yellow-400';
       case 'hard':
-        return 'from-gray-300 to-gray-500';
+        return 'bg-white';
       case 'intermediate':
-        return 'from-green-400 to-green-600';
+        return 'bg-green-500';
       case 'wet':
-        return 'from-blue-400 to-blue-600';
+        return 'bg-blue-500';
       default:
-        return 'from-purple-400 to-purple-600';
-    }
-  };
-
-  // Get tire emoji
-  const getTireEmoji = (comp: string) => {
-    switch (comp.toLowerCase()) {
-      case 'soft':
-        return '🔴';
-      case 'medium':
-        return '🟡';
-      case 'hard':
-        return '⚪';
-      case 'intermediate':
-        return '🟢';
-      case 'wet':
-        return '🔵';
-      default:
-        return '🏎️';
+        return 'bg-gray-400';
     }
   };
 
   return (
-    <div className="bg-gradient-to-br from-gray-700/50 to-gray-900/70 rounded-2xl p-6 h-full flex flex-col justify-center 
-      border border-gray-600/30 shadow-2xl backdrop-blur-sm transform transition-all hover:scale-[1.02]">
-      <div className="text-gray-300 text-xl mb-4 font-semibold tracking-wider uppercase">
+    <div className="bg-[#1F2937] rounded-xl p-4 text-center h-full flex flex-col justify-between shadow-xl hover:shadow-2xl transition-shadow duration-300">
+      {/* Label - Consistent Typography */}
+      <div className="text-[#D4D4D4] text-sm uppercase tracking-wider font-medium mb-2">
         Position & Compound
       </div>
-      <div className="flex items-center mb-4 space-x-4">
-        <span className="text-gray-400 text-lg">Position:</span>
-        <span className="text-white text-5xl font-bold bg-clip-text text-transparent 
-          bg-gradient-to-r from-blue-400 to-blue-600 drop-shadow-lg">
+      
+      {/* Content */}
+      <div className="flex-grow flex flex-col items-center justify-center space-y-3">
+        {/* Position - Primary Value */}
+        <div className="text-white text-6xl font-bold">
           {position}
-        </span>
-      </div>
-      <div className="flex items-center space-x-4">
-        <span className="text-gray-400 text-lg">Compound:</span>
+        </div>
+        
+        {/* Compound - Secondary Value with Color Badge */}
         <div className="flex items-center space-x-2">
-          <span className="text-3xl">{getTireEmoji(compound)}</span>
-          <span className={`text-white text-3xl font-bold bg-clip-text text-transparent 
-            bg-gradient-to-r ${getCompoundColor(compound)} drop-shadow-lg`}>
+          <div className={`w-6 h-6 rounded-full ${getCompoundColor()}`}></div>
+          <div className="text-white text-2xl font-bold">
             {compound}
-          </span>
+          </div>
         </div>
       </div>
     </div>

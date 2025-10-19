@@ -12,25 +12,21 @@ const LapSignalBox: React.FC<LapSignalBoxProps> = ({ signal }) => {
     if (upperSignal.includes('PUSH') || upperSignal.includes('IMPROVING')) {
       return {
         bgColor: 'bg-green-600',
-        
         pulseClass: 'animate-pulse'
       };
     } else if (upperSignal.includes('WARNING') || upperSignal.includes('DEGRADATION')) {
       return {
         bgColor: 'bg-red-600',
-        //icon: '⚠️',
         pulseClass: 'animate-pulse'
       };
     } else if (upperSignal.includes('MAINTAIN') || upperSignal.includes('STABLE')) {
       return {
         bgColor: 'bg-blue-600',
-        //icon: '➡️',
         pulseClass: ''
       };
     } else {
       return {
         bgColor: 'bg-gray-600',
-        //icon: '📊',
         pulseClass: ''
       };
     }
@@ -40,8 +36,9 @@ const LapSignalBox: React.FC<LapSignalBoxProps> = ({ signal }) => {
 
   return (
     <div className="bg-[#1F2937] rounded-xl p-4 h-full flex flex-col justify-between shadow-xl hover:shadow-2xl transition-shadow duration-300">
-      <div className="text-[#D4D4D4] text-lg mb-2 uppercase tracking-wider text-center">
-        Lap Signal
+      {/* Label - Consistent Typography */}
+      <div className="text-[#D4D4D4] text-sm uppercase tracking-wider text-center font-medium mb-2">
+        Race Pace
       </div>
       
       <div className={`
@@ -51,12 +48,12 @@ const LapSignalBox: React.FC<LapSignalBoxProps> = ({ signal }) => {
         p-4 
         flex-grow 
         flex 
-        flex-col 
         items-center 
         justify-center
         text-center
       `}>
-        <div className="text-white text-xl font-bold leading-tight break-words">
+        {/* Signal Message - Consistent Typography */}
+        <div className="text-white text-2xl font-bold leading-tight break-words uppercase">
           {signal}
         </div>
       </div>

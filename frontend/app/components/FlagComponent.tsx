@@ -4,12 +4,12 @@ export type FlagType = 'none' | 'red' | 'yellow';
 
 interface FlagComponentProps {
   flagType?: FlagType;
-  incidentMessage?: string;  // NEW: Added this prop
+  incidentMessage?: string;  // ADD THIS PROP
 }
 
 const FlagComponent: React.FC<FlagComponentProps> = ({ 
   flagType = 'none',
-  incidentMessage = ''  // NEW: Added this parameter
+  incidentMessage = ''  // ADD THIS
 }) => {
   const [isWarningFlashEnabled, setIsWarningFlashEnabled] = useState(true);
 
@@ -31,7 +31,7 @@ const FlagComponent: React.FC<FlagComponentProps> = ({
       default:
         return {
           bgColor: 'bg-[#2C2C2C]',
-          text: 'GREEN',  // CHANGED: Was 'NONE', now 'GREEN'
+          text: 'GREEN',  // Changed from 'NONE'
           blinkClass: ''
         };
     }
@@ -40,14 +40,14 @@ const FlagComponent: React.FC<FlagComponentProps> = ({
   const { bgColor, text, blinkClass } = getFlagStyles();
 
   return (
-    <div className="bg-[#2C2C2C] rounded-lg p-4 text-center h-full flex flex-col justify-between">
-      <div className="text-[#D4D4D4] text-lg mb-2 uppercase tracking-wider">
+    <div className="bg-[#2C2C2C] rounded-xl p-4 text-center h-full flex flex-col justify-between shadow-xl hover:shadow-2xl transition-shadow duration-300">
+      {/* Label - Consistent Typography */}
+      <div className="text-[#D4D4D4] text-sm uppercase tracking-wider font-medium mb-2">
         Flag Status
       </div>
       
-      {/* CHANGED: Wrapped in flex container */}
       <div className="flex-grow flex flex-col justify-center">
-        {/* Flag Status */}
+        {/* Flag Status - Primary Value */}
         <div className={`
           text-white 
           text-4xl 
@@ -61,7 +61,7 @@ const FlagComponent: React.FC<FlagComponentProps> = ({
           {text}
         </div>
         
-        {/* NEW: Incident Message Display */}
+        {/* Incident Message - Secondary Info */}
         {incidentMessage && flagType !== 'none' && (
           <div className="mt-3 text-yellow-300 text-sm font-semibold bg-black/50 rounded px-2 py-2 break-words">
             {incidentMessage}
@@ -69,8 +69,9 @@ const FlagComponent: React.FC<FlagComponentProps> = ({
         )}
       </div>
       
-      <div className="flex items-center mt-2">
-        <span className="text-[#D4D4D4] text-sm mr-4">Warning Flash</span>
+      {/* Toggle Control */}
+      <div className="flex items-center justify-center mt-2">
+        <span className="text-[#D4D4D4] text-xs mr-3 font-medium">Warning Flash</span>
         <label className="inline-flex items-center cursor-pointer">
           <input
             type="checkbox"

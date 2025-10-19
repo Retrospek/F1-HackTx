@@ -229,27 +229,43 @@ export default function Dashboard() {
   return (
     <div className="fixed inset-0 bg-gradient-to-br from-teal-800 via-blue-900 to-blue-950 text-white flex flex-col">
       {/* Race Header */}
-      <div className="bg-black text-white pl-4 pr-4 pt-3 pb-3 rounded-b-xl shadow-lg">
+      <div className="bg-black text-white px-6 py-4 shadow-2xl border-b-2 border-blue-500/30">
         <div className="flex items-center justify-between">
-          <div className="flex items-center text-lg">
-            <span className="text-white font-bold mr-2">Race:</span>
-            <span className="text-white mr-4">{raceInfo?.circuit || 'Loading...'} {raceInfo?.season} GP</span>
-            <span className="text-white font-bold mr-2">Driver:</span>
-            <span className="text-white">{raceInfo?.driver || 'Loading...'}</span>
+          {/* Left: Race Info */}
+          <div className="flex items-center space-x-6">
+            <div className="flex items-center">
+              <span className="text-[#D4D4D4] text-sm uppercase tracking-wider font-medium mr-2">Race:</span>
+              <span className="text-white text-lg font-bold">{raceInfo?.circuit || 'Loading...'} {raceInfo?.season} GP</span>
+            </div>
+            <div className="h-6 w-px bg-gray-600"></div>
+            <div className="flex items-center">
+              <span className="text-[#D4D4D4] text-sm uppercase tracking-wider font-medium mr-2">Driver:</span>
+              <span className="text-white text-lg font-bold">{raceInfo?.driver || 'Loading...'}</span>
+            </div>
           </div>
           
-          {/* Race Controls */}
-          <div className="flex items-center space-x-4">
-            <div className="text-white font-bold">
-              Lap: {currentLap?.current_lap || 0} / {raceInfo?.total_laps || '?'}
+          {/* Right: Race Controls */}
+          <div className="flex items-center space-x-6">
+            <div className="text-white text-lg font-bold">
+              <span className="text-[#D4D4D4] text-sm uppercase tracking-wider font-medium">Lap: </span>
+              {currentLap?.current_lap || 0} / {raceInfo?.total_laps || '?'}
             </div>
-            <div className="text-white">
-              Status: {raceStatus}
+            <div className="h-6 w-px bg-gray-600"></div>
+            <div className="flex items-center">
+              <span className="text-[#D4D4D4] text-sm uppercase tracking-wider font-medium mr-2">Status:</span>
+              <span className={`text-lg font-bold ${
+                raceStatus === 'Active' ? 'text-green-400' : 
+                raceStatus === 'Race Finished' ? 'text-red-400' : 
+                'text-yellow-400'
+              }`}>
+                {raceStatus}
+              </span>
             </div>
+            <div className="h-6 w-px bg-gray-600"></div>
             {!isRaceActive && raceStatus !== 'Race Finished' && (
               <button
                 onClick={startRace}
-                className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-bold transition-colors"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-bold uppercase tracking-wider transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Start Race
               </button>
@@ -257,7 +273,7 @@ export default function Dashboard() {
             {(currentLap !== null && raceStatus !== 'Race Finished' && isRaceActive) && (
               <button
                 onClick={toggleRace}
-                className={`bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg font-bold transition-colors`}
+                className="bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2.5 rounded-lg text-sm font-bold uppercase tracking-wider transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Pause
               </button>
@@ -265,7 +281,7 @@ export default function Dashboard() {
              {(currentLap !== null && raceStatus !== 'Race Finished' && !isRaceActive && raceStatus !== 'Ready') && (
               <button
                 onClick={toggleRace}
-                className={`bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-bold transition-colors`}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-bold uppercase tracking-wider transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Resume
               </button>
@@ -273,7 +289,7 @@ export default function Dashboard() {
             {raceStatus === 'Race Finished' && (
               <button
                 onClick={startRace}
-                className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-bold transition-colors"
+                className="bg-red-500 hover:bg-red-600 text-white px-5 py-2.5 rounded-lg text-sm font-bold uppercase tracking-wider transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Restart
               </button>
@@ -281,15 +297,14 @@ export default function Dashboard() {
           </div>
         </div>
         
-        {/* Lap Time Signal & Incident Message */}
-        <div className="mt-2 space-y-1">
-          {/* Show incident message when present */}
-          {displayData.incidentMessage && (
-            <div className="font-bold text-yellow-400 animate-pulse">
+        {/* Incident Message Banner */}
+        {displayData.incidentMessage && (
+          <div className="mt-3 pt-3 border-t border-gray-700">
+            <div className="font-bold text-yellow-400 animate-pulse text-base uppercase tracking-wide">
               🚩 {displayData.incidentMessage}
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
       
       {/* Dashboard Content */}
